@@ -6,5 +6,5 @@ type Point struct {
 }
 
 func NewPoint(x, y int) *Point {
-	return nil
+	return &Point{x, y}
 }
