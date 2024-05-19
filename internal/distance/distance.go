@@ -1,7 +1,10 @@
 package distance_find
 
-import "math"
+import (
+	distance_find "distance_find/internal/point"
+	"math"
+)
 
-func DistanceBetweenPoints(x1, y1, x2, y2 int) float64 {
-	return math.Sqrt(float64((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2)))
+func DistanceBetweenPoints(p1, p2 *distance_find.Point) float64 {
+	return math.Sqrt(float64((p1.X-p2.X)*(p1.X-p2.X) + (p1.Y-p2.Y)*(p1.Y-p2.Y)))
 }
